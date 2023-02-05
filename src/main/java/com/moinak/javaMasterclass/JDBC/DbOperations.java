@@ -118,8 +118,8 @@ public class DbOperations {
 	public ResultSet getAllOrder() throws SQLException {
 		Connection con = DbUtil.getConnection();
 		PreparedStatement pstmt = con.prepareStatement("select id,product_id,order_date from category order by id");
-		ResultSet rs = pstmt.executeQuery();
+		ResultSet resultSet = pstmt.executeQuery();
 		DbUtil.closeConnection(con);
-		return rs;
+		return resultSet;
 	}
 }
